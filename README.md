@@ -24,28 +24,6 @@
 
 
 
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Best-README-Template</h3>
-
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
-  </p>
-</p>
 
 
 
@@ -67,11 +45,9 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -80,22 +56,21 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/1102jhc/Youtube-Crawler)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+프로젝트의 목표는 'Simple' 입니다. 기본 유튜브에는 수많은 영상들이 있고 그것을 검색하고자 하는 사람들도 점점 많아져 나날이 최고치를 찍고 있습니다. 그런 사용자들에게 조금은 더 직관적인 검색을 제공하고자 개발하게 되었습니다. 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+Advantages
+* 필터를 먼저 설정한 뒤 검색을 할 수 있습니다. 검색을 하고나서 필터를 설정하는 불편함을 제거합니다.
+* 추천 검색 결과가 뜨지 않습니다. 불필요한 정보들의 노출을 막아주어 사용자의 편의성이 증가합니다.  
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+대부분의 사용자들에게는 추천된 영상들 또는 채널들이 그들의 선택에 좀 더 도움을 줄 수도 있습니다. 그렇기 때문에 사용자의 검색 목록들과 조회한 영상들을 분석하여 그들의 성향을 알아낸 것을 기반으로 추천된 리소스들을 나타내어주는 기능을 추가할 계획을 가지고 있습니다.
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+프로젝트를 제작하는 데 사용된 주요 모듈을 기술하는 부분입니다. 언어, 프레임워크, API 등을 포함합니다.
+
 * [C#(Windows Forms App(.NET Framework)](https://dotnet.microsoft.com/)
 * [YoutubeDataAPI](https://developers.google.com/youtube/v3)
 
@@ -112,10 +87,8 @@ This section should list any major frameworks that you built your project using.
 프로젝트를 실행시키기 위해 필요한 소프트웨어 및 설치방법을 알려주는 예시입니다.
 
 1. 비쥬얼 스튜디오를 설치합니다. 이 프로젝트는 2019버전을 사용하였습니다.
-* Visual Studio 2019
-  ```sh
-  [https://visualstudio.microsoft.com/ko/vs/](https://visualstudio.microsoft.com/ko/vs/)
-  ```
+* Visual Studio 2019 [https://visualstudio.microsoft.com/ko/vs/](https://visualstudio.microsoft.com/ko/vs/)
+  
 2. VS에서 '추가 도구 및 기능설치' 를 누르고 Windows Forms App(.NET Framework) 템플릿을 설치합니다.
 
 ### Installation
@@ -127,7 +100,7 @@ This section should list any major frameworks that you built your project using.
    ```
 3. Youtube-Crawler 폴더 안의 Like_Youtube.sln 을 실행시킵니다. 
 4. API 패키지를 설치합니다.
-*VS에서 Nuget 패키지 관리자 >> 패키지 관리자 콘솔(Package Manager Console)
+* VS에서 Nuget 패키지 관리자 >> 패키지 관리자 콘솔(Package Manager Console)
   ```sh
   install-package Google.APIs
   install-package Google.APIs.YouTube.v3
@@ -141,18 +114,21 @@ This section should list any major frameworks that you built your project using.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+프로젝트 사용법을 나타낸 항목입니다.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+1. Youtube-Crawloer 폴더 안의 Like_Youtube.sln을 실행해 주세요.
+2. 본인의 API Key로 바꾸어 입력해주세요.
+```
+   ApiKey=" put your API Key "
+   ```
+3. 실행하시면 로고 창이 나오면서 1초 후 메인 폼으로 이동합니다.
+4. 텍스트 창에 검색어 입력 후 필터를 설정하여 검색 버튼을 눌러주세요.
+5. 리스트 박스에 검색된 리소스들이 나옵니다.
+* 검색된 리소스를 좌클릭 하면 우측 창에 썸네일과 관련 정보들이 나오고 우클릭하면 미리보기 창이 나오며 더블클릭 시 사용자의 디폴트 브라우저로 해당 리소스 페이지를 띄워줍니다.
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
+6. 메인 폼의 종료 버튼을 눌러도 꺼지지 않고 우측 밑 NotifyIcon으로 남습니다. 
+7. NotifyIcon 좌클릭 시 모달 창이 나오며 썸네일 폴더 및 도움말을 볼 수 있습니다.
+8. 종료 하고 싶으시면 NotifyIcon을 우클릭 후 종료 버튼을 눌러주세요.
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -170,14 +146,15 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 <!-- LICENSE -->
 ## License
 
-README.md는 오픈소스를 활용한 것으로 MIT 라이선스에 따라 배포됩니다. 자세한 내용은 LICENSE를 참조하세요.
+이 프로젝트는 MIT 라이센스에 따라 배포됩니다. 자세한 내용은 LICENSE.md를 참고해주세요.
+README.md는 오픈소스를 활용한 것으로 MIT 라이선스에 따라 배포됩니다. 자세한 내용은 LICENSE.txt를 참조하세요.
 
 <!-- CONTACT -->
 ## Contact
 
-정희철 - [@your_twitter](https://twitter.com/your_username) - email@example.com
+heechul Jung - heechul.dev@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Github Address : [https://github.com/1102jhc](https://github.com/1102jhc)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
