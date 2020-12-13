@@ -60,7 +60,7 @@
 
 프로젝트를 제작하는 데 사용된 주요 모듈을 기술하는 부분입니다. 언어, 프레임워크, API 등을 포함합니다.
 
-* [C#(Windows Forms App(.NET Framework)](https://dotnet.microsoft.com/)
+* [C#(Windows Forms App(.NET Framework))](https://dotnet.microsoft.com/)
 * [YoutubeDataAPI](https://developers.google.com/youtube/v3)
 
 
