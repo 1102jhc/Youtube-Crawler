@@ -66,7 +66,7 @@
 <!-- CODE -->
 ## 핵심 코드
 
-###검색 메서드
+### 검색 메서드
  ```sh
  private async void Search()
         {
