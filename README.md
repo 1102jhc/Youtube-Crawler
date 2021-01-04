@@ -18,24 +18,24 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Table of Contents</summary>
+  <summary>목차</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">프로젝트</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">사용 기술</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">실행 방법</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#prerequisites">코드 에디터</a></li>
+        <li><a href="#installation">설치</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#usage">사용법</a></li>
+   
+    <li><a href="#license">라이센스</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -43,20 +43,20 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## 프로젝트
 
 [![Product Name Screen Shot][product-screenshot]](https://github.com/1102jhc/Youtube-Crawler)
 
 프로젝트의 목표는 'Simple' 입니다. 기본 유튜브에는 수많은 영상들이 있고 그것을 검색하고자 하는 사람들도 점점 많아져 나날이 최고치를 찍고 있습니다. 그런 사용자들에게 조금은 더 직관적인 검색을 제공하고자 개발하게 되었습니다. 
 
-**Advantages**
+**이점**
 * 필터를 먼저 설정한 뒤 검색을 할 수 있습니다. 검색을 하고나서 필터를 설정하는 불편함을 제거합니다.
 * 추천 검색 결과가 뜨지 않습니다. 불필요한 정보들의 노출을 막아주어 사용자의 편의성이 증가합니다.  
 
 대부분의 사용자들에게는 추천된 영상들 또는 채널들이 그들의 선택에 좀 더 도움을 줄 수도 있습니다. 그렇기 때문에 사용자의 검색 목록들과 조회한 영상들을 분석하여 그들의 성향을 알아낸 것을 기반으로 추천된 리소스들을 나타내어주는 기능을 추가할 계획을 가지고 있습니다.
 
 
-### Built With
+### 사용 기술
 
 프로젝트를 제작하는 데 사용된 주요 모듈을 기술하는 부분입니다. 언어, 프레임워크, API 등을 포함합니다.
 
@@ -66,12 +66,12 @@
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## 실행 방법
 
 프로젝트를 로컬저장소에 다운받아 설정하는 방법에 대한 지침을 제공하는 방법입니다.
 프로젝트를 실행하려면 다음 단계들을 따라해주세요.
 
-### Prerequisites
+### 코드 에디터
 
 프로젝트를 실행시키기 위해 필요한 소프트웨어 및 설치방법을 알려주는 예시입니다.
 
@@ -80,7 +80,7 @@
   
 2. VS에서 '추가 도구 및 기능설치' 를 누르고 Windows Forms App(.NET Framework) 템플릿을 설치합니다.
 
-### Installation
+### 설치
 
 1. 본인의 ' Youtube API KEY ' 를 발급받습니다. [https://console.developers.google.com](https://console.developers.google.com)
 2. repo를 Clone 합니다.
@@ -119,16 +119,6 @@
 7. NotifyIcon 좌클릭 시 모달 창이 나오며 썸네일 폴더 및 도움말을 볼 수 있습니다.
 8. 종료 하고 싶으시면 NotifyIcon을 우클릭 후 종료 버튼을 눌러주세요.
 
-<!-- CONTRIBUTING -->
-## Contributing
-
-여러분의 기여는 오픈 소스 커뮤니티를 윤택하고 활력 있는 배움과 영감의 장소로 만들어 줍니다. 모든 의견은 항상 **감사하게** 받겠습니다.
-
-1. 프로젝트를 Fork 합니다.
-2. master 기반으로 브랜치를 만듭니다.
-3. 수정하여 Commit 합니다.
-4. 브랜치에 Push 합니다.
-5. Pull Request를 생성합니다.
 
 
 
@@ -136,7 +126,6 @@
 ## License
 
 이 프로젝트는 MIT 라이센스에 따라 배포됩니다. 자세한 내용은 LICENSE.md를 참고해주세요.
-README.md는 오픈소스를 활용한 것으로 MIT 라이선스에 따라 배포됩니다. 자세한 내용은 LICENSE.txt를 참조하세요.
 
 <!-- CONTACT -->
 ## Contact
