@@ -26,6 +26,7 @@
         <li><a href="#built-with">사용 기술</a></li>
       </ul>
     </li>
+ <li><a href="#code">핵심코드</a></li>
     <li>
       <a href="#getting-started">실행 방법</a>
       <ul>
@@ -62,9 +63,10 @@
 * [C#(Windows Forms App(.NET Framework))](https://dotnet.microsoft.com/)
 * [YoutubeDataAPI](https://developers.google.com/youtube/v3)
 
-<!-- GETTING STARTED -->
+<!-- CODE -->
 ## 핵심 코드
 
+###검색 메서드
  ```sh
  private async void Search()
         {
@@ -72,7 +74,7 @@
             {
                 
                 //유튜브 Data Api를 쓰기 위해 필요한 API 키 지정
-                ApiKey = "AIzaSyD3ES_e79Vv3SfkPtxwsnCreDOTY6Hqdkg",
+                ApiKey = " API 키를 넣어주세요. ",
                 ApplicationName = "Youtube Search"
             });
 
