@@ -193,7 +193,7 @@
             //Search용 Request 실행
             var result = await request.ExecuteAsync();
 
-            
+            //텍스트창이 비어있는지 확인
             if (TextCheck() == true)
             {
                 foreach (var item in result.Items)
