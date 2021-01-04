@@ -258,7 +258,7 @@
 
 프로젝트 사용법을 나타낸 항목입니다.
 
-1. Youtube-Crawloer 폴더 안의 Like_Youtube.sln을 실행해 주세요.
+1. Youtube-Crawler 폴더 안의 Like_Youtube.sln을 실행해 주세요.
 2. 본인의 API Key로 바꾸어 입력해주세요.
 ```
    ApiKey=" API 키를 넣어주세요 "
