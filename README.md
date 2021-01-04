@@ -34,7 +34,6 @@
       </ul>
     </li>
     <li><a href="#usage">사용법</a></li>
-   
     <li><a href="#license">라이센스</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
