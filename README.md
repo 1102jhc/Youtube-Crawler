@@ -62,7 +62,159 @@
 * [C#(Windows Forms App(.NET Framework))](https://dotnet.microsoft.com/)
 * [YoutubeDataAPI](https://developers.google.com/youtube/v3)
 
+<!-- GETTING STARTED -->
+## 핵심 코드
 
+ ```sh
+ private async void Search()
+        {
+            var youtube = new YouTubeService(new BaseClientService.Initializer()
+            {
+                
+                //유튜브 Data Api를 쓰기 위해 필요한 API 키 지정
+                ApiKey = "AIzaSyD3ES_e79Vv3SfkPtxwsnCreDOTY6Hqdkg",
+                ApplicationName = "Youtube Search"
+            });
+
+            
+            //Search용 Request 생성
+            var request = youtube.Search.List("snippet");
+            request.Q = txtSearch.Text; //ex : "코끼리"
+            request.MaxResults = 40;
+
+            if (this.cbDivision.SelectedIndex == 0)
+            {
+                // 비디오 검색
+                request.Type = "video";
+                searchType = "video";
+
+                // 정렬
+                switch (this.cbOrder.SelectedIndex)
+                {
+                    case 0:
+                        // 관련성
+                        request.Order = SearchResource.ListRequest.OrderEnum.Relevance;
+                        break;
+                    case 1:
+                        // 조회수
+                        request.Order = SearchResource.ListRequest.OrderEnum.ViewCount;
+                        break;
+                    case 2:
+                        //날짜별로 역순
+                        request.Order = SearchResource.ListRequest.OrderEnum.Date;
+                        break;
+                }
+                
+               
+
+                // 동영상 타입별 필터
+                switch (this.cbVideoType.SelectedIndex)
+                {
+                    case 0:
+                        request.VideoType = SearchResource.ListRequest.VideoTypeEnum.Any;
+                        break;
+                    case 1:
+                        request.VideoType = SearchResource.ListRequest.VideoTypeEnum.Episode;
+                        break;
+                    case 2:
+                        request.VideoType = SearchResource.ListRequest.VideoTypeEnum.Movie;
+                        break;
+                }
+                
+                
+
+                // 동영상 길이별 필터
+                switch (this.cbLength.SelectedIndex)
+                {
+
+                    case 0:
+                        request.VideoDuration = SearchResource.ListRequest.VideoDurationEnum.Any;
+                        break;
+                    case 1:
+                        request.VideoDuration = SearchResource.ListRequest.VideoDurationEnum.Short__;
+                        break;
+                    case 2:
+                        request.VideoDuration = SearchResource.ListRequest.VideoDurationEnum.Long__;
+                        break;
+                }
+                 
+            }
+            else if (this.cbDivision.SelectedIndex == 1)
+            {
+                // 채널 검색
+                request.Type = "channel";
+                searchType = "channel";
+
+                // 관련성, 조회순, 날짜별로 정렬
+                if (cbOrder.SelectedIndex == 0)
+                {
+                    // 관련성
+                    request.Order = SearchResource.ListRequest.OrderEnum.Relevance;
+                }
+                else if (cbOrder.SelectedIndex == 1)
+                {
+                    // 조회수
+                    request.Order = SearchResource.ListRequest.OrderEnum.ViewCount;
+                }
+                else if (cbOrder.SelectedIndex == 2)
+                {
+                    //날짜별로 역순
+                    request.Order = SearchResource.ListRequest.OrderEnum.Date;
+                }
+
+            }
+            else if(this.cbDivision.SelectedIndex == 2)
+            {
+                // 플레이리스트 검색
+                request.Type = "playlist";
+                searchType = "playlist";
+
+                // 관련성, 조회순, 날짜별로 정렬
+                if (cbOrder.SelectedIndex == 0)
+                {
+                    // 관련성
+                    request.Order = SearchResource.ListRequest.OrderEnum.Relevance;
+                }
+                else if (cbOrder.SelectedIndex == 1)
+                {
+                    // 조회수
+                    request.Order = SearchResource.ListRequest.OrderEnum.ViewCount;
+                }
+                else if (cbOrder.SelectedIndex == 2)
+                {
+                    //날짜별로 역순
+                    request.Order = SearchResource.ListRequest.OrderEnum.Date;
+                }
+            }
+ 
+
+            //Search용 Request 실행
+            var result = await request.ExecuteAsync();
+
+            
+            if (TextCheck() == true)
+            {
+                foreach (var item in result.Items)
+                {   
+                    switch (item.Id.Kind)
+                    {
+                        case "youtube#video" :
+                            lvResult.Items.Add(item.Id.VideoId.ToString(), item.Snippet.Title, 0);
+                            break;
+                        case "youtube#channel":
+                            lvResult.Items.Add(item.Id.ChannelId.ToString(), item.Snippet.ChannelTitle, 1);
+                            break;
+                        case "youtube#playlist":
+                            lvResult.Items.Add(item.Id.PlaylistId.ToString(), item.Snippet.Title, 2);
+                            break;
+                    }
+                }
+
+                // 리스트박스에 검색목록 추가
+                this.lbLog.Items.Add(this.txtSearch.Text);
+            }
+        }  
+```
 
 <!-- GETTING STARTED -->
 ## 실행 방법
@@ -96,7 +248,7 @@
 * 4번째 단계는 Youtube Data API를 사용하기 위해 설치하는 패키지입니다. 위 프로젝트에는 패키지가 이미 있기에 별도의 설치가 필요없으며 차후 버전의 문제나 별도의 작업을 하실 경우 참고하여 설치 해주세요.  
 5. Form1의 176, 366번째 줄에 본인의 API 키를 넣습니다.
  ```
-   ApiKey=" put your API Key "
+   ApiKey=" API 키를 넣어주세요 "
    ```
 
 <!-- USAGE EXAMPLES -->
@@ -107,7 +259,7 @@
 1. Youtube-Crawloer 폴더 안의 Like_Youtube.sln을 실행해 주세요.
 2. 본인의 API Key로 바꾸어 입력해주세요.
 ```
-   ApiKey=" put your API Key "
+   ApiKey=" API 키를 넣어주세요 "
    ```
 3. 실행하시면 로고 창이 나오면서 1초 후 메인 폼으로 이동합니다.
 4. 텍스트 창에 검색어 입력 후 필터를 설정하여 검색 버튼을 눌러주세요.
